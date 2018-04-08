@@ -1,0 +1,24 @@
+schema {
+	query: Query
+}
+
+type Query {
+	allLibraries: [Library]
+	library(id: Int): Library
+	allBooks: [Book]
+	book(id: String): Book
+}
+
+type Library {
+	id: Int
+	booksCount: Int
+	name: String
+	books: [Book]
+}
+
+type Book {
+	id: String
+	pages: Int
+	title: String
+	author: String
+}
